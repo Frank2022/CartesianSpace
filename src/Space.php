@@ -50,6 +50,7 @@ class Space
      * @param Point $pointOne
      * @param Point $pointTwo
      * @return float
+     * @throws DimensionException
      * @throws SpaceException
      */
     public function getDistance(Point $pointOne, Point $pointTwo): float
