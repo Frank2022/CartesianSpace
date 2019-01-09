@@ -16,6 +16,7 @@ use Frank2022\CartesianSpace\exceptions\DimensionException;
  */
 trait CoordinateTrait
 {
+    private $coordinates = [];
     /**
      * CoordinateTrait constructor.
      * @param float ...$coordinates

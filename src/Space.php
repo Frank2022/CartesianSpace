@@ -105,6 +105,7 @@ class Space
      * @param Vector $vectorOne
      * @param Vector $vectorTwo
      * @return float
+     * @throws DimensionException
      * @throws SpaceException
      */
     public function getVectorProduct(Vector $vectorOne, Vector $vectorTwo): float
@@ -117,6 +118,7 @@ class Space
      * @param Vector $vectorOne
      * @param Vector $vectorTwo
      * @return float
+     * @throws DimensionException
      * @throws SpaceException
      */
     public function getVectorAngle(Vector $vectorOne, Vector $vectorTwo): float
@@ -155,7 +157,6 @@ class Space
         $this->checkDimension($coordinateObjectOne, $coordinateObjectTwo);
         $vectorCoordinates = [];
         for ($n = 0; $n < $this->getDimension(); $n++) {
-            $result = null;
             $coordinateOne = $coordinateObjectOne->getCoordinate($n);
             $coordinateTwo = $coordinateObjectTwo->getCoordinate($n);
             switch ($operation) {
